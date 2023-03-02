@@ -1,0 +1,16 @@
+<h1>Emmas dads contact page</h1>
+
+<%= @emmas_parents %>
+
+<form action="/contact" method="get">
+  <input type="text" name="name-of-text" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<%= link_to "go to about page", about_path %>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
